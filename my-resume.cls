@@ -293,7 +293,7 @@
 % contact info
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\infofield}[2]{\mbox{\makebox[5mm]{\textcolor{accent}{\normalsize #1}}\hspace{0.5em}#2}\vspace{0.2em}\newline}
+\newcommand{\infofield}[2]{\mbox{\makebox[5mm]{\textcolor{accent}{\normalsize #1}}\hspace{0.7em}\large #2}\vspace{0.5em}\newline}
 \newcommand{\email}[1]{\infofield{\faEnvelope}{\href{mailto:#1}{#1}}}
 \newcommand{\address}[1]{\infofield{\faAt}{#1}}
 \newcommand{\location}[1]{\infofield{\faMapMarker}{#1}}
@@ -374,11 +374,11 @@
 % set length of date/place column versus position column in fraction of linewidth before linewidth gets redefined in minipages
 \newlength{\jobdateplacelength}
 \newlength{\jobpositionlength}
-\setlength{\jobdateplacelength}{0.4\linewidth}
-\setlength{\jobpositionlength}{0.6\linewidth}
+\setlength{\jobdateplacelength}{0.5\linewidth}
+\setlength{\jobpositionlength}{0.5\linewidth}
 \newcommand{\job}[4]{%
     \begin{minipage}[t]{\jobdateplacelength}% minipage for left column with date/place
-        \footnotesize
+        \small
         \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line dates
             \makebox[3mm][c]{\faCalendar}
         \end{minipage}%
@@ -399,7 +399,7 @@
     \begin{minipage}[t]{\jobpositionlength}% minipage for position
         {\large \color{emphasis} #3}
     \end{minipage}%
-    \ifstrequal{#4}{}{}{\par \vspace{0.1em} \footnotesize #4}
+    \ifstrequal{#4}{}{}{\par \vspace{0.6em} \normalsize #4}
     \par\normalsize
     \vspace{0.5em}
 }

@@ -1,7 +1,7 @@
 \documentclass[%singlesided,
                doublesided,
                paper=a4,
-               fontsize=10pt
+               fontsize=11pt
               ]{my-resume}
 
 
@@ -47,8 +47,9 @@
 \begin{document}
 %% Amazing tag line that makes HR managers want to hire you immediately.\\The tag line is aligned with the bottom of the picture to the right, so if you have\\multiple lines it fills the space to your name from the bottom. You might want to\\introduce manual line breaks to make this look nicer then simply filling up the lines.
 \name{Jens Svensmark, PhD}
-\tagline{An experienced scientist specialized in computational physics. \\
-  Strong record of computational and mathematical skills, predictive modeling and data visualization.\\ Creative, driven and self-reliant.\\ Looking for a data
+\tagline{ {\LARGE Data scientist}\\
+  An experienced scientist specialized in computational physics.
+  Strong record \\ of computational and mathematical skills, predictive modeling and data visualization. \\ Creative, driven and self-reliant. \\ Looking for a data
 science position in which I can continue to grow.}
 \photo[round]{pictures/me_cropped.jpg}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
 
@@ -71,20 +72,23 @@ science position in which I can continue to grow.}
     \skillsection{Programming}
     Python
     \begin{itemize}
-    \item scikit-learn
-    \item numpy
-    \item pandas
+    \item Scikit-learn
+    \item Numpy
+    \item Pandas
+    \item Visualization
+      \begin{itemize}
+        \item Matplotlib
+        \item Holoviews
+      \end{itemize}
     \end{itemize}
 
     Fortran
+    \begin{itemize}
+    \item High-performance computing
+    \item OpenMP
+    \end{itemize}
     
     
-    \vspace{0.5em}
-    \skillsection{Software \& Tools}
-    Visualisation
-    (e.g. matplotlib, gnuplot, ...)\\
-    Data handling/analysis
-    (e.g. numpy, scipy, pandas, ...)\\
     
     
     \vspace{0.5em}
@@ -115,12 +119,21 @@ science position in which I can continue to grow.}
       {Data Science Certification}
       {Certified as data scientist professional by Datacamp.
 
-        Built and deployed a model for predicting car resale prices as capstone project.
+        Built a model for predicting car resale prices as capstone project.
+
+        Deployed the model using a restful flask server.
       }
   \job{Nov. 2019 - Now}
       {The University of Electro-Communications, \\Chofu, Tokyo}
       {Assistant Professor}
       {%Additional details for this position. Can be left empty to omit this line
+
+        Predicted how molecules move when exposed to lasers
+
+        Implemented highly performant simulator in fortran
+
+        Validated analytical theories by comparing to numerical results
+
       }
   \job{Nov. 2017 - Nov. 2019}
       {The University of Electro-Communications, \\Chofu, Tokyo}
@@ -130,25 +143,33 @@ science position in which I can continue to grow.}
   \job{Oct. 2016 - Oct. 2017}
       {Kansas State University, USA}
       {Postdoctoral researcher}
-      {The main project I was in charge of was a benchmark
-        effort to compare different algorithms for solving a
-        common problem in atomic physics. This involved
-        establishing standards for the benchmark, including
-        convergence criterion, and coordinating between a number
-        of different groups from both the US and Europe.}
+      {Launched a benchmarking effort to identify most efficient algorithms for solving a numerically challenging problem in the field
+
+        Coordinated this effort between 9 research groups in the US, Europe and Asia.
+
+        Determined that the fastest method was more than 200 times faster than the slowest method.
+        
+      }
     
   \section[\faMortarBoard]{Education}
 
   \job{Aug. 2012 - Sep. 2016}
       {Aarhus University, Denmark}
       {PhD in Physics}
-      {My PhD project was about simulating dynamics of
-        molecules in strong laser fields. I worked with a low-level
-        programming language (fortran) to create efficient programs for
-        solving computationally intensive problems. I then collected and
-        analysed results from these programs, and compared the results to
-        approximate theories, in order to assess in which regimes those
-        theories work well.  }
+      {%% My PhD project was about simulating dynamics of
+       %%  molecules in strong laser fields. I worked with a low-level
+       %%  programming language (fortran) to create efficient programs for
+       %%  solving computationally intensive problems. I then collected and
+       %%  analysed results from these programs, and compared the results to
+       %%  approximate theories, in order to assess in which regimes those
+       %%  theories work well.
+
+        %% Simulated how molecules move when exposed to lasers
+
+        %% Implemented highly performant program in fortran
+
+        
+      }
 
 
   \job{2011--2014}

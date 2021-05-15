@@ -373,11 +373,19 @@
 
 % set length of date/place column versus position column in fraction of linewidth before linewidth gets redefined in minipages
 \newlength{\jobdateplacelength}
+\newlength{\jobplacelength}
 \newlength{\jobpositionlength}
-\setlength{\jobdateplacelength}{0.5\linewidth}
-\setlength{\jobpositionlength}{0.5\linewidth}
+\setlength{\jobdateplacelength}{0.3\linewidth}
+\setlength{\jobplacelength}{0.5\linewidth}
+\setlength{\jobpositionlength}{0.7\linewidth}
 \newcommand{\job}[4]{%
-    \begin{minipage}[t]{\jobdateplacelength}% minipage for left column with date/place
+          {\LARGE \color{emphasis} #3}
+
+          \par \vspace{0.4em}
+ 
+    %% \vspace{0.3em}
+          %% \begin{minipage}[t]{\jobdateplacelength}% minipage for left column with date/place
+          {
         \small
         \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line dates
             \makebox[3mm][c]{\faCalendar}
@@ -386,22 +394,23 @@
         \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap date in minipage to allow multi-line dates
             #1
         \end{minipage}%
-        \par
-        \vspace{0.1em}
+        %% \par
+        %% \vspace{0.1em}
         \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line places
             \makebox[3mm][c]{\faMapMarker}
         \end{minipage}%
         \hspace{0.5em}%
-        \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap place in minipage to allow multi-line places
+        \begin{minipage}[t]{\dimexpr \jobplacelength-3mm-0.5em}% wrap place in minipage to allow multi-line places
             #2
         \end{minipage}%
-    \end{minipage}%
-    \begin{minipage}[t]{\jobpositionlength}% minipage for position
-        {\large \color{emphasis} #3}
-    \end{minipage}%
-    \ifstrequal{#4}{}{}{\par \vspace{0.6em} \normalsize #4}
+        }
+    %% \end{minipage}%
+    %% \begin{minipage}[t]{\jobpositionlength}% minipage for position
+        %% {\large \color{emphasis} #3}
+    %% \end{minipage}%
+    \ifstrequal{#4}{}{}{\par \vspace{0.4em} \normalsize #4}
     \par\normalsize
-    \vspace{0.5em}
+    \vspace{0.3em}
 }
 
 
